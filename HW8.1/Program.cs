@@ -71,9 +71,9 @@ for (int i = 0; i < 5; i++)
 }
 int max = array[0, 0];
 int min = array[0, 0];
-int maxRow =  array[0, 0];
+int maxRow = array[0, 0];
 int minRow = array[0, 0];
-int maxCol =  array[0, 0];
+int maxCol = array[0, 0];
 int minCol = array[0, 0];
 
 for (int i = 0; i < 5; i++)
@@ -94,5 +94,5 @@ for (int i = 0; i < 5; i++)
         }
     }
 }
-Console.WriteLine("Максимальний елемент: " + max + " на позиції (" + maxRow + ", " + maxCol + ")");
-Console.WriteLine("Мінімальний елемент: " + min + " на позиції (" + minRow + ", " + minCol + ")");
+Console.WriteLine($"Максимальний елемент: {max} на позиції ({maxRow}, {maxCol})");
+Console.WriteLine($"Мінімальний елемент: {min} на позиції ({minRow}, {minCol})");
