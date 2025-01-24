@@ -57,42 +57,57 @@
 //}
 
 //4. Створити двовимірний масив 5х5. Заповнити його будь-якими числами. Визначити та вивести на екран: а) максимальний елемент масиву; б) мінімальний елемент масиву; в) координати мінімального елемента масиву. г) координати максимального елемента масиву.
-int[,] array = new int[5, 5];
-Random rand =  new Random();
+//int[,] array = new int[5, 5];
+//Random rand =  new Random();
 
-for (int i = 0; i < 5; i++)
-{
-    for (int j = 0; j < 5; j++)
-    {
-        array[i, j] = rand.Next(-50, 50);
-        Console.Write(array[i, j] + "\t");
-    }
-    Console.WriteLine();
-}
-int max = array[0, 0];
-int min = array[0, 0];
-int maxRow = array[0, 0];
-int minRow = array[0, 0];
-int maxCol = array[0, 0];
-int minCol = array[0, 0];
+//for (int i = 0; i < 5; i++)
+//{
+//    for (int j = 0; j < 5; j++)
+//    {
+//        array[i, j] = rand.Next(-50, 50);
+//        Console.Write(array[i, j] + "\t");
+//    }
+//    Console.WriteLine();
+//}
+//int max = array[0, 0];
+//int min = array[0, 0];
+//int maxRow = array[0, 0];
+//int minRow = array[0, 0];
+//int maxCol = array[0, 0];
+//int minCol = array[0, 0];
 
-for (int i = 0; i < 5; i++)
+//for (int i = 0; i < 5; i++)
+//{
+//    for (int j = 0; j < 5; j++)
+//    {
+//        if (array[i, j] > max)
+//        {
+//            max = array[i, j];
+//            maxRow = i;
+//            maxCol = j;
+//        }
+//        if (array[i, j] < min)
+//        {
+//            min = array[i, j];
+//            minRow = i;
+//            minCol = j;
+//        }
+//    }
+//}
+//Console.WriteLine($"Максимальний елемент: {max} на позиції ({maxRow}, {maxCol})");
+//Console.WriteLine($"Мінімальний елемент: {min} на позиції ({minRow}, {minCol})");
+
+//5. За допомогою enum створити програму, що буде запитувати у користувача кількість днів, а потім рахувати який буде день через введену кількість, якщо рахувати від понеділка і виводити результат
+Console.Write("Введіть кількість днів: ");
+int daysInput = int.Parse(Console.ReadLine());
+enum DaysOfWeek
 {
-    for (int j = 0; j < 5; j++)
-    {
-        if (array[i, j] > max)
-        {
-            max = array[i, j];
-            maxRow = i;
-            maxCol = j;
-        }
-        if (array[i, j] < min)
-        {
-            min = array[i, j];
-            minRow = i;
-            minCol = j;
-        }
-    }
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
 }
-Console.WriteLine($"Максимальний елемент: {max} на позиції ({maxRow}, {maxCol})");
-Console.WriteLine($"Мінімальний елемент: {min} на позиції ({minRow}, {minCol})");
+
