@@ -14,31 +14,44 @@
 //}
 
 //2. Визначити, чи вірно, що сума елементів масиву з пункту 1 є невід'ємне число.
-int[] array = new int[10];
-Random rand = new Random();
+//int[] array = new int[10];
+//Random rand = new Random();
 
-for (int i = 1; i < array.Length; i++)
-{
-    array[i] = rand.Next(-10, 11);
-}
+//for (int i = 1; i < array.Length; i++)
+//{
+//    array[i] = rand.Next(-10, 11);
+//}
 
-Console.WriteLine("Елементи масиву з парними індексами: ");
-for (int i = 0; i < array.Length; i += 2)
-{
-    Console.WriteLine($"Індекс {i}: {array[i]}");
-}
+//Console.WriteLine("Елементи масиву з парними індексами: ");
+//for (int i = 0; i < array.Length; i += 2)
+//{
+//    Console.WriteLine($"Індекс {i}: {array[i]}");
+//}
 
-int sum = 0;
-foreach (int number in array)
-{
-    sum += number;
-}
+//int sum = 0;
+//foreach (int number in array)
+//{
+//    sum += number;
+//}
 
-if (sum >= 0)
+//if (sum >= 0)
+//{
+//    Console.WriteLine("Сума елементів масиву є невід'ємною");
+//}
+//else
+//{
+//    Console.WriteLine("Сума елементів масиву є від'ємною");
+//}
+
+// Створити та заповнити двовимірний масив розміру 9х9 з результатами таблиці множення (у першому рядку мають бути записані добутки кожного з чисел від 1 до 9 на 1, у другому – на 2, ..., в останньому – на 9). Тобто в 1 строчці будуть значення від 1 до 9, а у другому 2,4,6,....,18 і т.д.
+int[,] multipTable = new int[9, 9];
+
+for (int i = 0; i < 9; i++) 
 {
-    Console.WriteLine("Сума елементів масиву є невід'ємною");
-}
-else
-{
-    Console.WriteLine("Сума елементів масиву є від'ємною");
+    for (int j = 0; j < 9; j++) 
+    {
+        multipTable[i, j] = (i + 1) * (j + 1);
+
+    }
+    Console.WriteLine();
 }
