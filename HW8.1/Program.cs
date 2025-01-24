@@ -6,3 +6,9 @@ for (int i = 1; i < array.Length; i++)
 {
     array[i] = rand.Next(-10, 11);
 }
+
+Console.WriteLine("Елементи масиву з парними індексами: ");
+for (int i = 0; i < array.Length; i += 2)
+{
+    Console.WriteLine($"Індекс {i}: {array[i]}");
+}
