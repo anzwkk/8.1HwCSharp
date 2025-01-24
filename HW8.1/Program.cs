@@ -100,6 +100,10 @@
 //5. За допомогою enum створити програму, що буде запитувати у користувача кількість днів, а потім рахувати який буде день через введену кількість, якщо рахувати від понеділка і виводити результат
 Console.Write("Введіть кількість днів: ");
 int daysInput = int.Parse(Console.ReadLine());
+int startDay = 0;
+
+int dayOfWeek = (startDay + daysInput) % 7;
+Console.WriteLine($"День тижня: {((DayOfWeek)dayOfWeek)}");
 enum DaysOfWeek
 {
     Monday,
